@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router({ mergeParams: true });
-var passport = require("passport");
 
 //@route GET /
 //@desc static homepage
@@ -42,12 +41,12 @@ router.get("/our-team", (req, res) => {
 //@desc static team
 //access public
 router.get("/our-team", (req, res) => {
-  res.render("about-team");
+  res.render("/about-team");
 });
 //@route GET /process
 //@desc static process
 //access public
 router.get("/process", (req, res) => {
-  res.render("process");
+  res.render("/process");
 });
 module.exports = router;
