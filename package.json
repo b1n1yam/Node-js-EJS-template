@@ -1,0 +1,39 @@
+{
+  "name": "made-in-ethiopia",
+  "version": "1.0.0",
+  "description": "A web application for Made In Ethipia shoes and leather manufacturing PLC",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon node.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exeligent/Made-In-Ethiopia-lether.git"
+  },
+  "author": "Biniyam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exeligent/Made-In-Ethiopia-lether/issues"
+  },
+  "homepage": "https://github.com/exeligent/Made-In-Ethiopia-lether#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express-session": "^1.15.6",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
