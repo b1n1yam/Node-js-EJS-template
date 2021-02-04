@@ -1,15 +1,36 @@
-const express = require("express"),
-  bodyParser = require("body-parser"),
-  mongoose = require("mongoose"),
-  app = express(),
-  passport = require("passport"),
-  LocalStrategy = require("passport-local"),
-  flash = require("connect-flash"),
-  methodOverride = require("method-override"),
-  keys = require("./config/keys");
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const app = express();
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const flash = require("connect-flash");
+const methodOverride = require("method-override");
+const keys = require("./config/keys");
 
 //mongoose setup
-mongoose.connect("mongodb://127.0.0.1/madeInEthiiopiaDB");
+try {
+  mongoose
+    .connect(
+      "mongodb://exeligent-shard-00-01-knapx.mongodb.net:27017,exeligent-shard-00-02-knapx.mongodb.net:27017/test?ssl=true&replicaSet=Exeligent-shard-0&authSource=admin&retryWrites=true&w=majority",
+      {
+        auth: {
+          user: "sam",
+          password: "9604040347",
+        },
+      }
+    )
+    .then(() => console.log("atlas db connected"))
+    .catch((err) => {
+      console.log("err", err);
+    });
+
+  //console.log('MongoDB Connected...');
+} catch (err) {
+  console.error(err.message);
+  //Exit process with failure
+  process.exit(1);
+}
 
 //initializing routes
 app.use(bodyParser.json());
