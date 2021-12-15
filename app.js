@@ -9,7 +9,7 @@ const express = require("express"),
   keys = require("./config/keys");
 
 //mongoose setup
-mongoose.connect("mongodb://127.0.0.1/madeInEthiiopiaDB");
+//mongoose.connect("mongodb://127.0.0.1/madeInEthiiopiaDB");
 
 //initializing routes
 app.use(bodyParser.json());
@@ -20,22 +20,22 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 //passport config
-require("./config/passport")(passport);
+// require("./config/passport")(passport);
 
 //ROUTES INIT
-const indexRoutes = require("./routes/index"),
-  userRoutes = require("./routes/user"),
-  shopRoutes = require("./routes/shop");
+const indexRoutes = require("./routes/index");
+// userRoutes = require("./routes/user"),
+// shopRoutes = require("./routes/shop");
 
 //ROUTES SETUP
 //ROUTES
 app.use(indexRoutes);
-app.use("/user", userRoutes);
-app.use(shopRoutes);
+// app.use("/user", userRoutes);
+// app.use(shopRoutes);
 
-const port = 3000;
+const port = 5000;
 
-app.listen(port, () => console.log("Made in Ethiopia - server running!"));
+app.listen(port, () => console.log(`bfarm server running on port ${port}`));

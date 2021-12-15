@@ -1,126 +1,334 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Webster - Responsive Multi-purpose HTML5 Template" />
-<meta name="author" content="potenzaglobalsolutions.com" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Webster - Responsive Multi-purpose HTML5 Template</title>
-
-<!-- Favicon -->
-<link rel="shortcut icon" href="images/favicon.ico" />
-
-<!-- font -->
-<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900|Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
- 
-<!-- Plugins -->
-<link rel="stylesheet" type="text/css" href="css/plugins-css.css" />
-
-<!-- Typography -->
-<link rel="stylesheet" type="text/css" href="css/typography.css" />
-
-<!-- Shortcodes -->
-<link rel="stylesheet" type="text/css" href="css/shortcodes/shortcodes.css" />
-
-<!-- Style -->
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-<!-- Responsive -->
-<link rel="stylesheet" type="text/css" href="css/responsive.css" /> 
-  
-</head>
-
-<body>
- 
- <div class="wrapper">
+<%include ../views/partials/header%>
 
 <!--=================================
- preloader -->
- 
-<div id="pre-loader">
-    <img src="images/pre-loader/loader-01.svg" alt="">
-</div>
+page-title-->
 
-<!--=================================
- preloader -->
-
- 
-<!--=================================
- Signup-->
-
-<section class="height-100vh d-flex align-items-center page-section-ptb login" style="background: url(images/signup/05.jpg);">
+<section
+  class="page-title bg-overlay-black-60 parallax"
+  data-jarallax='{"speed": 0.6}'
+  style="background-image: url(revolution/assets/demo/parallax-zoom-slices/38960-12.jpg);"
+>
   <div class="container">
-     <div class="row no-gutters justify-content-center">
-       <div class="col-lg-4  col-md-6 login-fancy-bg bg-overlay-black-20 parallax" style="background: url(images/signup/03.jpg);">
-         <div class="login-fancy pos-r">
-          <h2 class="text-white mb-20">Hello world!</h2>
-          <p class="mb-20 text-white">Create tailor-cut websites with the exclusive multi-purpose responsive template along with powerful features.</p>
-          <ul class="list-unstyled list-inline-item pos-bot pb-30">
-            <li class="list-inline-item"><a class="text-white" href="#"> Terms of Use</a> </li>
-            <li class="list-inline-item"><a class="text-white" href="#"> Privacy Policy</a></li>
-          </ul>
-         </div> 
-       </div>
-       <div class="col-lg-4 white-bg">
-        <div class="login-fancy pb-40 clearfix">
-        <h3 class="mb-30">Signup</h3>
-         <div class="row">
-             <div class="section-field mb-20 col-sm-6">
-               <label class="mb-10" for="name">First name* </label>
-                 <input id="name" class="web form-control" type="text" placeholder="First name" name="web">
-              </div>
-               <div class="section-field mb-20 col-sm-6">
-               <label class="mb-10" for="name">Last name* </label>
-                 <input id="name" class="web form-control" type="text" placeholder="Last name" name="web">
-              </div>
-            </div>
-            <div class="section-field mb-20">
-                 <label class="mb-10" for="name">Email* </label>
-                  <input type="email" placeholder="Email*" class="form-control" name="email">
-             </div>
-            <div class="section-field mb-20">
-             <label class="mb-10" for="Password">Password* </label>
-               <input id="Password" class="Password form-control" type="password" placeholder="Password" name="Password">
-            </div>
-              <a href="#" class="button">
-                <span>Signup</span>
-                <i class="fa fa-check"></i>
-             </a>
-             <p class="mt-20 mb-0">Don't have an account? <a href="login-05.html"> Create one here</a></p>
-          </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-title-name">
+          <h1>Dashboard</h1>
+          <p>We know the secret of success</p>
         </div>
+        <ul class="page-breadcrumb">
+          <li>
+            <a href="#"><i class="fa fa-home"></i> Home</a>
+            <i class="fa fa-angle-double-right"></i>
+          </li>
+          <li><span>Dashboard</span></li>
+        </ul>
       </div>
+    </div>
   </div>
 </section>
 
 <!--=================================
- Signup-->
-  
+page-title -->
 
-</div>
-
-  
-
-<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div> 
- 
 <!--=================================
- jquery -->
+ contact-->
+<section class="white-bg page-section-ptb o-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="section-title text-center">
+          <h6 class="">Hasn't joined us yet? Register Now.</h6>
+          <h2 class="title-effect">Register An Account</h2>
+          <p class="">
+        Register to our training now!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <form action="/register" id="my-register-form" method="POST">
+          <div id="register-form" class="register-form">
+            <div class="section-field ">
+              <label> Name*</label>
+              <div class="field-widget">
+                <input
+                  type="text"
+                  class=" form-control"
+                  placeholder=" Name"
+                  name="name"
+                />
+              </div>
+            </div>
 
-<!-- jquery -->
-<script src="js/jquery-3.3.1.min.js"></script>
+            <div class="section-field">
+              <label>Email Or Username*</label>
+              <div class="field-widget">
+                <input
+                  class="email form-control"
+                  type="text"
+                  placeholder="Enter  email"
+                  name="email"
+                />
+              </div>
+            </div>
 
-<!-- plugins-jquery -->
-<script src="js/plugins-jquery.js"></script>
+            <label>Your birthday *</label>
+            <div class="row">
+              <div class="section-field col-md-4">
+                 <div class="box">
+                       <select class="Wide fancyselect" style="display: none;">
+                         <option value="Day">Day</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                         <option value="11">11</option>
+                         <option value="12">12</option>
+                         <option value="13">13</option>
+                         <option value="14">14</option>
+                         <option value="15">15</option>
+                         <option value="16">16</option>  
+                         <option value="17">17</option>  
+                         <option value="18">18</option>  
+                         <option value="19">19</option>  
+                         <option value="20">20</option>  
+                         <option value="21">21</option>  
+                         <option value="22">22</option>  
+                         <option value="23">23</option>  
+                         <option value="24">24</option>  
+                         <option value="25">25</option>  
+                         <option value="26">26</option>  
+                         <option value="27">27</option>  
+                         <option value="28">28</option>  
+                         <option value="29">29</option>  
+                         <option value="30">30</option>  
+                         <option value="31">31</option>  
+                     </select><div class="nice-select Wide fancyselect" tabindex="0"><span class="current">Day</span><ul class="list"><li data-value="Day" class="option selected">Day</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option">5</li><li data-value="6" class="option">6</li><li data-value="7" class="option">7</li><li data-value="8" class="option">8</li><li data-value="9" class="option">9</li><li data-value="10" class="option">10</li><li data-value="11" class="option">11</li><li data-value="12" class="option">12</li><li data-value="13" class="option">13</li><li data-value="14" class="option">14</li><li data-value="15" class="option">15</li><li data-value="16" class="option">16</li><li data-value="17" class="option">17</li><li data-value="18" class="option">18</li><li data-value="19" class="option">19</li><li data-value="20" class="option">20</li><li data-value="21" class="option">21</li><li data-value="22" class="option">22</li><li data-value="23" class="option">23</li><li data-value="24" class="option">24</li><li data-value="25" class="option">25</li><li data-value="26" class="option">26</li><li data-value="27" class="option">27</li><li data-value="28" class="option">28</li><li data-value="29" class="option">29</li><li data-value="30" class="option">30</li><li data-value="31" class="option">31</li></ul></div>
+                  </div>
+                 </div>
+                 <div class="section-field col-md-4">
+                 <div class="box">
+                      <select class="Wide fancyselect" style="display: none;">
+                         <option value="Month">Month</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                         <option value="11">11</option>
+                         <option value="12">12</option>
+                     </select><div class="nice-select Wide fancyselect" tabindex="0"><span class="current">Month</span><ul class="list"><li data-value="Month" class="option selected">Month</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option">5</li><li data-value="6" class="option">6</li><li data-value="7" class="option">7</li><li data-value="8" class="option">8</li><li data-value="9" class="option">9</li><li data-value="10" class="option">10</li><li data-value="11" class="option">11</li><li data-value="12" class="option">12</li></ul></div>
+                  </div>
+                 </div>
+                 <div class="section-field col-md-4">
+                   <div class="box">
+                         <select class="Wide fancyselect" style="display: none;">
+                         <option value="Year">Year</option>
+                         <option value="1990">1990</option>
+                         <option value="1991">1991</option>
+                         <option value="1992">1992</option>
+                         <option value="1993">1993</option>
+                         <option value="1994">1994</option>
+                         <option value="1995">1995</option>
+                         <option value="1996">1996</option>
+                         <option value="1997">1997</option>
+                         <option value="1998">1998</option>
+                         <option value="1999">1999</option>
+                         <option value="2001">2001</option>
+                         <option value="2002">2002</option>
+                         <option value="2003">2003</option>
+                         <option value="2004">2004</option>
+                         <option value="2005">2005</option>
+                         <option value="2006">2006</option>
+                         <option value="2007">2007</option>
+                         <option value="2008">2008</option>
+                         <option value="2009">2009</option>
+                         <option value="2010">2010</option>
+                         <option value="2011">2011</option>
+                         <option value="2012">2012</option>
+                         <option value="2013">2013</option>
+                         <option value="2014">2014</option>
+                         <option value="2017">2017</option>
+                         <option value="2016">2016</option>
+                     </select><div class="nice-select Wide fancyselect" tabindex="0"><span class="current">Year</span><ul class="list"><li data-value="Year" class="option selected">Year</li><li data-value="1990" class="option">1990</li><li data-value="1991" class="option">1991</li><li data-value="1992" class="option">1992</li><li data-value="1993" class="option">1993</li><li data-value="1994" class="option">1994</li><li data-value="1995" class="option">1995</li><li data-value="1996" class="option">1996</li><li data-value="1997" class="option">1997</li><li data-value="1998" class="option">1998</li><li data-value="1999" class="option">1999</li><li data-value="2001" class="option">2001</li><li data-value="2002" class="option">2002</li><li data-value="2003" class="option">2003</li><li data-value="2004" class="option">2004</li><li data-value="2005" class="option">2005</li><li data-value="2006" class="option">2006</li><li data-value="2007" class="option">2007</li><li data-value="2008" class="option">2008</li><li data-value="2009" class="option">2009</li><li data-value="2010" class="option">2010</li><li data-value="2011" class="option">2011</li><li data-value="2012" class="option">2012</li><li data-value="2013" class="option">2013</li><li data-value="2014" class="option">2014</li><li data-value="2017" class="option">2017</li><li data-value="2016" class="option">2016</li></ul></div>
+                   </div>
+                  </div>
+                 </div>
 
-<!-- plugin_path -->
-<script>var plugin_path = 'js/';</script>
- 
-<!-- custom -->
-<script src="js/custom.js"></script>
+                 <label>Gender *</label>
+                 <div class="box">
+                  <select class="Wide fancyselect" style="display: none;">
+                     <option value="">I am</option>
+                     <option value="male">male</option>
+                     <option value="female">Female</option>
+                     
+                 </select><div class="nice-select Wide fancyselect" tabindex="0"><span class="current">I am</span><ul class="list"><li data-value="" class="option selected focus">I am</li><li data-value="male" class="option">male</li><li data-value="female" class="option">Female</li></li></ul></div>
+              </div>
+              <div class="section-field">
+                <label>Mobile phone *</label>
+                 <div class="field-widget">
+                  <input id="phone" class="phone form-control" type="text" placeholder="Enter your mobile no" name="phone">
+                 </div> 
+               </div>
+               <div class="section-field">
+                <label>Blood Group *</label>
+                 <div class="field-widget">
+                  <input id="phone" class="phone form-control" type="text" placeholder="Enter your mobile no" name="phone">
+                 </div> 
+               </div>
+               <div class="section-field">
+                <label>Educational Background *</label>
+                 <div class="field-widget">
+              <div class="row">
+                    <div class="col-md-6 section-field">
+                        <div class="remember-checkbox">
+                           <input type="checkbox" class="form-control" name="one" id="one">
+                            <label for="one">Primary School</label>
+                           </div>
+                           </div>
+                           <div class="col-md-6 section-field">
+                              <div class="remember-checkbox">
+                                 <input type="checkbox" class="form-control" name="two" id="two">
+                                  <label for="two">Secondary School</label>
+                                 </div>
+                                 </div>
+                                 <div class="col-md-6 section-field">
+                                    <div class="remember-checkbox">
+                                       <input type="checkbox" class="form-control" name="three" id="three">
+                                        <label for="three">Preparatory School</label>
+                                       </div>
+                                       </div>
 
- 
- 
-</body>
-</html>
+                                       <div class="col-md-6 section-field">
+                                          <div class="remember-checkbox">
+                                             <input type="checkbox" class="form-control" name="four" id="four">
+                                              <label for="four">TVET School</label>
+                                             </div>
+                                             </div>
+
+                                             <div class="col-md-6 section-field">
+                                                <div class="remember-checkbox">
+                                                   <input type="checkbox" class="form-control" name="five" id="five">
+                                                    <label for="five">University </label>
+                                                   </div>
+                                                   </div>
+
+                                                   <div class="col-md-6 section-field">
+                                                      <div class="remember-checkbox">
+                                                         <input type="checkbox" class="form-control" name="six" id="six">
+                                                          <label for="six">Graduate</label>
+                                                         </div>
+                                                         </div>
+                                                         <div class="col-md-6 section-field">
+                                                            <div class="remember-checkbox">
+                                                               <input type="checkbox" class="form-control" name="seven" id="seven">
+                                                                <label for="seven">Post Graduate School</label>
+                                                               </div>
+                                                              </div>
+                                                               </div>
+                 </div> 
+                
+               </div>
+               <div class="section-field">
+                  <label>Currrent Occupation *</label>
+                   <div class="field-widget">
+                    <input id="phone" class="phone form-control" type="text" placeholder="Enter your ocupation" name="phone">
+                   </div> 
+                 </div>
+
+                 <div class="section-field">
+                    <label>Relevenat Skills *</label>
+                     <div class="field-widget">
+                      <input id="phone" class="phone form-control" type="text" placeholder="Enter your releant skills" name="phone">
+                     </div> 
+                   </div>
+
+                   <div class="section-field">
+                      <label>Previous Voluntary Work Experience *</label>
+                       <div class="field-widget">
+                        <input id="phone" class="phone form-control" type="text" placeholder="Enter your Previous Voluntary Work Experience" name="phone">
+                       </div> 
+                     </div>
+
+                     <div class="section-field">
+                        <label>Name OF Contact Adress Of Two Refernce</label>
+                         <div class="field-widget">
+                          <input id="phone" class="phone form-control" type="text" placeholder="Enter your contact 1" name="phone">
+                         </div> 
+                         <div class="field-widget">
+                            <input id="phone" class="phone form-control" type="text" placeholder="Enter contact 2" name="phone">
+                           </div> 
+                       </div>
+
+                       <div class="section-field ">
+                          <label>Periods You May Be Available</label>
+                          <div class="row">
+                          <div class=" col-md-6 section-field ">
+                              <div class="remember-checkbox">
+                                 <input type="checkbox" class="form-control" name="eight" id="eight">
+                                  <label for="eight">Once Or Twice A Week Regularly</label>
+                                 </div>
+                                 </div>
+
+                                 <div class="  col-md-6 section-field">
+                                    <div class="remember-checkbox">
+                                       <input type="checkbox" class="form-control" name="nine" id="nine">
+                                        <label for="nine">When Needed</label>
+                                       </div>
+                                       </div>
+                                       <div class="section-field col-md-6">
+                                          <div class="remember-checkbox">
+                                             <input type="checkbox" class="form-control" name="ten" id="ten">
+                                              <label for="ten">At Disasters</label>
+                                             </div>
+                                             </div>
+
+                                             <div class="section-field col-md-6">
+                                                <div class="remember-checkbox">
+                                                   <input type="checkbox" class="form-control" name="illeven" id="illeven">
+                                                    <label for="illeven">At Special Events</label>
+                                                   </div>
+                                                   </div>
+                                                  </div>
+                         </div>
+                         <br>
+                         <br>
+                         <br>
+                         <div class="section-field">
+                            <div class="remember-checkbox">
+                               <input type="checkbox" class="form-control" name="twelve" id="twelve">
+                                <label for="twelve">Accept our <a href="#"> privacy policy</a> and <a href="#">  agreement</a></label>
+                               </div>
+                               </div>
+          </div>
+          <a
+            href="#"
+            style="border: none !important"
+            onclick="document.getElementById('my-register-form').submit()"
+            class="button mt-20"
+          >
+            <span>Register an account</span>
+            <i class="fa fa-check"></i>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<div style="margin-bottom: 100px"></div>
+<!--=================================
+ contact map -->
+
+<%include ../views/partials/footer%>

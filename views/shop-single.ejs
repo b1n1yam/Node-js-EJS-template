@@ -2,6 +2,7 @@
  <!--=================================
  header -->
  <%include partials/header%>
+
  
 <!--=================================
  header -->
@@ -62,8 +63,8 @@ shop -->
            <div class="col-lg-6">
              <div class="product-detail clearfix">
               <div class="product-detail-title mb-20 sm-mt-40">
-                  <h4 class="mb-10"> Product name</h4>
-                  <span>Consectetur lorem ipsum dolor sit amet, adipisicing elit. Accusamus officiis pariatur optio nobis culpa magni labor!  </span>
+                  <h4 class="mb-10"> <%=product.name%></h4>
+                  <span><%=product.notes%> </span>
               </div>
               <div class="clearfix mb-30">
                 <div class="product-detail-price"><del>$39.99</del> <ins>$24.99</ins></div>
@@ -84,12 +85,16 @@ shop -->
                   </div>
                 </div>
                 <div class="product-detail-des mb-30">
-                     <p class="mb-30">Adipisicing elit lorem ipsum dolor sit amet, consectetur. Dicta fugit cupiditate voluptates architecto nam totam ut, aperiam consequuntur aliquam voluptatem provident .</p>
+                     <p class="mb-30">Texture: <%=product.texture%></p>
+                     <p class="mb-30">Quality: <%=product.quality%></p>
+                     <p>Colors</p>
                    <ul class="list list-unstyled list-arrow">
                      <li>Voluptatem provident</li>
                      <li>Aperiam consequuntur</li>
                      <li>Officia doloremque</li>
                   </ul>
+
+                  <p>Size: <%=product.size%></p>
              </div>
              <div class="product-detail-meta">
                  <span>SKU: 8465415 </span>
@@ -624,19 +629,19 @@ action box- -->
  jquery -->
 
 <!-- jquery -->
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
 
 <!-- plugins-jquery -->
-<script src="js/plugins-jquery.js"></script>
+<script src="/js/plugins-jquery.js"></script>
 
 <!-- plugin_path -->
-<script>var plugin_path = 'js/';</script>
+<script>var plugin_path = '/js/';</script>
 
 <!-- plugins-jquery -->
-<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<script type="text/javascript" src="/js/slick/slick.min.js"></script>
  
 <!-- custom -->
-<script src="js/custom.js"></script>
+<script src="/js/custom.js"></script>
 
  
  

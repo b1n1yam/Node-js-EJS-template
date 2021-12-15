@@ -40,19 +40,20 @@ shop -->
         <div class="row">
           <div class="col-lg-9 col-md-9">
             <div class="row">
+              <% products.forEach(function(product){ %>
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="product mb-40">
                   <div class="product-image">
                     <img class="img-fluid mx-auto" src="images/shop/01.jpg" alt="">
                     <div class="product-overlay">
                       <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
+                        <a href="/product/<%=product.id%>">add to cart</a>
                       </div>
                     </div>
                   </div>
                   <div class="product-des">
                     <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
+                      <a href="shop-single.html"><%=product.name%></a>
                     </div>
                     <div class="product-rating">
                       <i class="fa fa-star"></i>
@@ -62,227 +63,13 @@ shop -->
                       <i class="fa fa-star-o"></i>
                     </div>
                     <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
+                      <del>$<%=product.price%></del> <ins>$<%=product.price%></ins>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/02.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/03.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/04.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/05.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/06.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/07.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/08.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="product mb-40">
-                  <div class="product-image">
-                    <img class="img-fluid mx-auto" src="images/shop/09.jpg" alt="">
-                    <div class="product-overlay">
-                      <div class="add-to-cart">
-                        <a href="shop-single.html">add to cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-des">
-                    <div class="product-title">
-                      <a href="shop-single.html">Product name</a>
-                    </div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="product-price">
-                      <del>$24.99</del> <ins>$12.49</ins>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <%})%>
+               
             </div>
           </div>
           <div class="col-lg-3 col-md-3">
